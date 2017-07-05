@@ -18,6 +18,15 @@ class NotebookInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
+    this.props.store.dispatch({
+      type: 'ADD_NOTEBOOK',
+      notebook: {
+        title: this.state.title
+      },
+    });
+    this.setState({
+      title: '',
+    })
   }
 
   render() {
