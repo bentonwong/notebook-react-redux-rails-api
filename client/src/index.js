@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import createStore from './createStore'
+import manageNotebook from './reducers/manageNotebook'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const store = createStore(manageNotebook);
+
+ReactDOM.render(<App store={store}/>, document.getElementById('root'));
