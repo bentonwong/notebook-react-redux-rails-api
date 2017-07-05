@@ -26,7 +26,7 @@ class NoteInput extends Component {
       body: ''
     })
   }
-  
+
   render() {
     <form>
       <Notes store={this.props.store} notebookId={this.props.notebookId}
@@ -38,3 +38,5 @@ class NoteInput extends Component {
 
   }
 }
+
+export default NoteInput;
