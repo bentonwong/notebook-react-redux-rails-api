@@ -13,12 +13,13 @@ class NotebookInput extends Component {
     this.setState({
       title: event.target.value,
     })
+    console.log(event.target.value)
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
   }
-  
+
   render() {
     return (
       <div>
