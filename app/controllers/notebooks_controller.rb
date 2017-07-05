@@ -29,7 +29,7 @@ class NotebooksController < ApplicationController
       params.require(:notebook).permit(:title)
     end
 
-    def set_note
+    def set_notebook
       @notebook = Notebook.find_by(id: params[:id])
     end
 end
