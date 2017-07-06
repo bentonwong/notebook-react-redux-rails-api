@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <NotebookInput store={this.props.store}/>
-        <Notebook store={this.props.store} />
+        <Notebooks store={this.props.store} />
       </div>
     );
   }

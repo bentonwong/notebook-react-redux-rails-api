@@ -3,14 +3,14 @@ import NoteInput from '../notes/NoteInput'
 
 class Notebook extends Component {
   render() {
-    return {
+    return (
       <div>
         <li>{this.props.notebook.title}
-          <NoteInput store={this.props.store} notebookId={this.props.notebook.id}
+          <NoteInput store={this.props.store} notebookId={this.props.notebook.id} />
         </li>
       </div>
-    }
+    );
   }
-}
+};
 
 export default Notebook;

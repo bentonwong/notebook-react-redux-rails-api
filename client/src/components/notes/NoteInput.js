@@ -22,14 +22,14 @@ class NoteInput extends Component {
       },
     });
     this.setState({
-      title: ''
+      title: '',
       body: ''
     })
   }
 
   render() {
     <form>
-      <Notes store={this.props.store} notebookId={this.props.notebookId}
+      <Notes store={this.props.store} notebookId={this.props.notebookId} />
       <label>Add note</label>
       <input type="text" value={this.state.title} onChange={(event) => this.handleOnChangeTitle(event)} />
       <input type="text" value={this.state.body} onChange={(event) => this.handleOnChangeBody(event)} />
