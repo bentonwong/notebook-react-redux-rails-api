@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NotebookInput store={this.props.store}/>
-        <Notebooks store={this.props.store} />
+        <NotebookInput />
+        <Notebooks />
       </div>
     );
   }

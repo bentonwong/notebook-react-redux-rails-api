@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NoteInput from '../notes/NoteInput'
 
-class Notebook extends Component {
-  render() {
-    return (
-      <div>
-        <li>{this.props.notebook}
-          <NoteInput store={this.props.store} notebookId={this.props.notebook} />
-        </li>
-      </div>
-    );
-  }
+const Notebook = (props) => {
+  return (
+    <div>
+      <li>{props.title}
+        <NoteInput store={props.store} notebookId={props.id} />
+      </li>
+    </div>
+  );
 };
 
 export default Notebook;
