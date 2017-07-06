@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Note from './Note';
+/*
+const Notes = ({notes}) => {
+  const notebookNotes = notes.filter(note => note.notebookId === notes.notebookId);
+  const notesList = notebookNotes.map((note, index) => {
+    return <Note key={index} note={note}/>
+  })
 
-class Notes extends Component {
-  render() {
-    const notebookNotes = this.props.store.getState().notes.filter(note => note.notebookId === this.props.notebookId);
-    const notes = notebookNotes.map((note, index) => {
-      return <Note store={this.props.store} key={index} note={note}/>
-    })
-    return (
-      <ul>
-        {notes}
-      </ul>
-    )
-  }
+  return (
+    <ul>
+      {notesList}
+    </ul>
+  )
 }
 
 export default Notes;
+
+*/

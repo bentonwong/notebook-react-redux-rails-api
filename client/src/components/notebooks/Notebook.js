@@ -1,12 +1,9 @@
 import React from 'react';
-import NoteInput from '../notes/NoteInput'
 
-const Notebook = (props) => {
+const Notebook = ({notebook}) => {
   return (
     <div>
-      <li>{props.title}
-        <NoteInput store={props.store} notebookId={props.id} />
-      </li>
+      <li>{notebook.title}</li>
     </div>
   );
 };

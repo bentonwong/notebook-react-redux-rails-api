@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Notebook from './Notebook'
 
-const Notebooks = (props) => {
-  const notebooks = props.notebooks.map((notebook, index) => {
-    return <Notebook notebook={notebook} key={index} store={props.store} />
+const Notebooks = ({notebooks}) => {
+  const notebookList = notebooks.map((notebook) => {
+    return <Notebook notebook={notebook} key={notebook.id} />
   });
   return(
     <ul>
-      {notebooks}
+      {notebookList}
     </ul>
   )
 }
