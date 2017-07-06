@@ -9,7 +9,8 @@ class App extends Component {
     super();
 
     this.state = {
-      notebooks: []
+      notebooks: [],
+      selectedNotebook: null
     };
   };
 
@@ -23,9 +24,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <NotebookInput />
+      <div>
         <Notebooks notebooks={this.state.notebooks}/>
+        <NotebookInput />
       </div>
     );
   }

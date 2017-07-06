@@ -11,7 +11,7 @@ class Notes extends Component {
   };
 
   componentDidMount() {
-    console.log("id: ", this.props.notebook.id)
+
     fetch('http://localhost:3000/notebooks/' + this.props.notebook.id + '/notes.json')
       .then(resp => resp.json())
         .then(data => {
