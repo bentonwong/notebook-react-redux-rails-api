@@ -5,9 +5,9 @@ const Notebook = ({notebook}) => {
   return (
     <li className="list-group-item">
       <div>
-        <h3>{notebook.title}</h3>
+        <h4>{notebook.title}</h4>
+        <Notes notebook={notebook} />
       </div>
-      <Notes notebook={notebook}/>
     </li>
   );
 };

@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import Note from './Note';
+import NoteInput from './NoteInput';
 
 class Notes extends Component {
-  constructor(props) {
-    super(props);
-
+  constructor() {
+    super();
     this.state = {
       notes: []
     };
   };
 
   componentDidMount() {
-
     fetch('http://localhost:3000/notebooks/' + this.props.notebook.id + '/notes.json')
       .then(resp => resp.json())
         .then(data => {
@@ -20,13 +19,14 @@ class Notes extends Component {
   }
 
   render() {
-    const noteList = this.state.notes.map((note) => {
+    const notesList = this.state.notes.map((note) => {
       return <Note note={note} key={note.id} />
     })
     return (
       <div>
         <ul>
-          {noteList}
+          {notesList}
+          <NoteInput />
         </ul>
       </div>
     )
