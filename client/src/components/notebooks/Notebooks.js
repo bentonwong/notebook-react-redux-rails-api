@@ -6,7 +6,7 @@ const Notebooks = ({notebooks}) => {
     return <Notebook notebook={notebook} key={notebook.id} />
   });
   return(
-    <ul>
+    <ul className="col-md-4 list-group">
       {notebookList}
     </ul>
   )

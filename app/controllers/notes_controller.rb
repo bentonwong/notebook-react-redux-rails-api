@@ -1,8 +1,9 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :update, :destroy]
+  before_action :set_notebook
 
   def index
-    @notes = Note.all
+    @notes = @notebook.notes
     render json: @notes.to_json, :layout => false
   end
 
@@ -31,6 +32,10 @@ class NotesController < ApplicationController
 
     def set_note
       @note = Note.find_by(id: params[:id])
+    end
+
+    def set_notebook
+      @notebook = Notebook.find_by(id: params[:notebook_id])
     end
 
 end

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Notebook = ({notebook}) => {
   return (
-    <div>
-      <li>{notebook.title}</li>
-    </div>
+    <li className="list-group-item">
+      <div>{notebook.title}</div>
+    </li>
   );
 };
 
