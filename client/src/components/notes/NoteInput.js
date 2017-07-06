@@ -11,6 +11,18 @@ class NoteInput extends Component {
     }
   }
 
+  handleOnChangeTitle(event) {
+    this.setState({
+      title: event.target.value,
+    });
+  }
+
+  handleOnChangeBody(event) {
+    this.setState({
+      body: event.target.value,
+    });
+  }
+
   handleOnSubmit(event) {
     event.preventDefault();
     this.props.store.dispatch({
@@ -31,9 +43,9 @@ class NoteInput extends Component {
     return (
       <form>
         <Notes store={this.props.store} notebookId={this.props.notebookId} />
-        <label>Add note</label>
-        <input type="text" value={this.state.title} onChange={(event) => this.handleOnChangeTitle(event)} />
-        <input type="text" value={this.state.body} onChange={(event) => this.handleOnChangeBody(event)} />
+        <label>Add note</label><br />
+        <input type="text" value={this.state.title} placeholder="title" onChange={(event) => this.handleOnChangeTitle(event)} /><br />
+        <input type="text" value={this.state.body} placeholder="body" onChange={(event) => this.handleOnChangeBody(event)} />
         <input type="submit" />
       </form>
     )

@@ -33,7 +33,8 @@ class NotebookInput extends Component {
     return (
       <div>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <input type="text" value={this.state.title} onChange={(event) => this.handleOnChange(event)}/>
+          <label>Add notebook</label><br />
+          <input type="text" value={this.state.title} placeholder="notebook title" onChange={(event) => this.handleOnChange(event)}/>
           <input type="submit"/>
         </form>
       </div>

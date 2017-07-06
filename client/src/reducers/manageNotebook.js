@@ -7,8 +7,8 @@ export default function manageNotebooks(state = {notebooks: [], notes: []}, acti
       const notebook = { title: action.notebook.title, id: cuidFn() };
       return Object.assign({}, state, { notebooks: state.notebooks.concat(notebook) });
     case 'ADD_NOTE':
-      const note = Object.assign({}, action.note, {id: cuidFn()} );
-      return Object.assign({}, state, { note: state.notes.concat(note)})
+      const note = Object.assign({}, action.note, { id: cuidFn() });
+      return Object.assign({}, state, { notes: state.notes.concat(note)})
     default:
       return state;
   }
