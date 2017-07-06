@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <NotebookInput />
         <Notebooks notebooks={this.state.notebooks}/>
       </div>

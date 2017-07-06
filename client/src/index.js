@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './stylesheets/main.scss'
 /*import createStore from './createStore'
 import manageNotebook from './reducers/manageNotebook.js';*/
 
