@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NotebookInput from './components/notebooks/NotebookInput'
 import Notebooks from './components/notebooks/Notebooks'
 import NotebookList from './containers/notebook-list'
+import NotebookDetail from './containers/notebook-detail'
 
 const notebooksAPIURL = 'http://localhost:3000/notebooks.json'
 
@@ -30,6 +31,7 @@ class App extends Component {
     return (
       <div>
         <NotebookList />
+        <NotebookDetail />
       </div>
     );
   }
