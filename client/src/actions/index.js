@@ -1,5 +1,6 @@
-
-
 export function selectNotebook(notebook) {
-  console.log('A book has been selected', notebook.title)
+  return {
+    type: 'SELECT_NOTEBOOK',
+    payload: notebook
+  };
 }

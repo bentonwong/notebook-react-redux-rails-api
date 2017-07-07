@@ -6,7 +6,14 @@ import { bindActionCreators } from 'redux'
 class NotebookList extends Component {
   renderList() {
     return this.props.notebooks.map((notebook) => {
-      return <li className="list-group-item" key={notebook.id}>{notebook.title}</li>
+      return (
+      <li
+        onClick={() => this.props.selectNotebook(notebook)}
+        className="list-group-item"
+        key={notebook.id}>
+        {notebook.title}
+      </li>
+    );
     })
   }
 
