@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import './stylesheets/main.scss'
-/*import createStore from './createStore'
-import manageNotebook from './reducers/manageNotebook.js';*/
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-/*const store = createStore(manageNotebook);*/
+
+import App from './App';
+import reducers from './reducers'
+import './stylesheets/main.scss'
+import './index.css';
+
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <App />,
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
-
-/*
-export const renderer = { render: render };
-
-store.dispatch({ type: '@@init'});
-*/

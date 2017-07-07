@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NotebookInput from './components/notebooks/NotebookInput'
 import Notebooks from './components/notebooks/Notebooks'
-import NotebookList from './containers/notebook-list.js'
+import NotebookList from './containers/notebook-list'
 
 const notebooksAPIURL = 'http://localhost:3000/notebooks.json'
 
@@ -29,8 +29,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NotebookInput />
-        <Notebooks notebooks={this.state.notebooks}/>
         <NotebookList />
       </div>
     );
