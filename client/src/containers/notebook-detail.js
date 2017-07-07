@@ -11,7 +11,7 @@ class NotebookDetail extends Component {
     })
     return (
       <div>
-        <div><h3>{this.props.notebook.title}</h3></div>
+        <div><h4>{this.props.notebook.title}</h4></div>
         <hr />
         <div>{notes}</div>
       </div>
