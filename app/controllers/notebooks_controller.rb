@@ -32,4 +32,5 @@ class NotebooksController < ApplicationController
     def set_notebook
       @notebook = Notebook.find_by(id: params[:id])
     end
+    
 end
